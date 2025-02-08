@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../../public/images/myNew/uu.jpg") no-repeat;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #23d789, #764ba9); */
+  color: white;
+}
+.signin-h1 {
+  margin-top: 40px;
+}
+
+.lbl-mbtm {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+form {
+  margin: 0 auto;
+  width: 350px;
+  background: linear-gradient(139deg, #29503f, #764ba9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.inputs {
+  text-align: center;
+  margin-bottom: 15px;
+  width: 0 auto;
+  margin-top: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.inputs input {
+  width: 93%;
+  padding: 10px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none; /* Removes the default focus outline */
+}
+
+.input-field:focus {
+  border: 1px solid #23d789;
+  box-shadow: 0px 0px 8px rgba(1, 236, 134, 0.4);
+}
+
+.input-field::placeholder {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 9;
+  letter-spacing: 0.2px;
+  color: gray;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.email-field {
+  margin-bottom: 10px;
+}
+
+.pass-field {
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+.sub-btn {
+  width: 40%;
+  padding: 10px;
+  background: #23d789;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #23d789;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-btn:hover {
+  background: none;
+  transition: 0.3s ease-in-out;
+  color: #23d789;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #23d789;
+}
+.forgot-signup {
+  margin-top: 13px;
+}
+
+.forgot-link {
+  text-decoration: none;
+  color: #23d789;
+  margin-top: 50px;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: #23d789;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #23d789;
+  margin-top: 10px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #23d789;
+}
