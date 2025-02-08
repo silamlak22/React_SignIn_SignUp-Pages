@@ -1,9 +1,15 @@
 // src/components/SignUp.js
-import React from "react";
 import { Link } from "react-router-dom";
+import react, { useState } from "react";
 import "../styles/signup.css";
 
 const SignUp = () => {
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className="container">
       <h1 className="signup-h1">Sign Up</h1>
@@ -35,10 +41,18 @@ const SignUp = () => {
                 <label>Password:</label>
               </div>
               <input
-                type="password"
-                className="input-field"
-                placeholder="Enter password"
+                type={showPassword ? "text" : "password"}
+                className="input-field pass-field "
+                value={password}
+                placeholder="Enter your Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
+              <i
+                onClick={togglePassVisibility}
+                className={`fa ${
+                  showPassword ? "fa-eye" : "fa-eye-slash"
+                } eye-icon-signup`}
+              ></i>
             </div>
             <div className="input-group">
               <div className="lbl-mbtm">
@@ -65,39 +79,6 @@ const SignUp = () => {
         </p>
       </div>
     </div>
-
-    // <div className="container">
-    //   <div className="signup-box">
-    //     <h1 className="signin-h1">Sign In</h1>
-    //     <form className="signup-form">
-    //       <div className="input-group">
-    //         <label>Name</label>
-    //         <input type="text" placeholder="Enter your name" />
-    //       </div>
-    //       <div className="input-group">
-    //         <label>Email</label>
-    //         <input type="email" placeholder="Enter your email" />
-    //       </div>
-    //       <div className="input-group">
-    //         <label>Password</label>
-    //         <input type="password" placeholder="Enter password" />
-    //       </div>
-    //       <div className="input-group">
-    //         <label>Confirm Password</label>
-    //         <input type="password" placeholder="Confirm password" />
-    //       </div>
-    //       <button type="submit" className="signup-button">
-    //         Sign Up
-    //       </button>
-    //     </form>
-    //     <p>
-    //       Already have an account?{" "}
-    //       <Link to="/signin" className="signin-link">
-    //         Sign In
-    //       </Link>
-    //     </p>
-    //   </div>
-    // </div>
   );
 };
 

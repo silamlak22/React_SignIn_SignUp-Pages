@@ -1,6 +1,7 @@
 import react, { useState } from "react";
 import "../styles/signin.css";
 import { Link } from "react-router-dom";
+import "font-awesome/css/font-awesome.min.css";
 const SignIn = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -33,16 +34,17 @@ const SignIn = () => {
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="input-field pass-field fas fa-eye"
+                  className="input-field pass-field "
                   value={password}
                   placeholder="Enter your Password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <i
-                  type="button"
                   onClick={togglePassVisibility}
-                  className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
-                />
+                  className={`fa ${
+                    showPassword ? "fa-eye" : "fa-eye-slash"
+                  } eye-icon`}
+                ></i>
               </span>
             </div>
           </div>
